@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            name="Konoha Editor"
+            extensions="k"
+            icon="icons/konohascript_logo2.png"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            class="org.konohascript.konoha_edit.editors.KonohaEditor"
+            id="org.konohascript.konoha_edit.editors.KonohaEditor">
+      </editor>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.console.consolePatternMatchListeners">
+      <consolePatternMatchListener
+            class="org.konohascript.konoha_edit.editors.KonohaConsolePatternMatcher"
+            id="org.konohascript.konoha.KonohaConsolePatternMatcher"
+            regex="\(.*:[0-9]*\)">
+            <enablement> </enablement>
+      </consolePatternMatchListener>
+   </extension>	
+
+</plugin>
