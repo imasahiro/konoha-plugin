@@ -143,7 +143,7 @@ public class KonohaUtil{
 			IEditorInput input = getEditorInput(ers[i]);
 			if(input == null) continue;
 			IFile f = getFile(input);
-			if(!f.equals(file)) continue;
+			if(f == null || !f.equals(file)) continue;
 			return getDocument(ers[i]);
 		}
 		return null;
